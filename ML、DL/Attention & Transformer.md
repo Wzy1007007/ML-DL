@@ -12,7 +12,7 @@
 
 缩放点积：要求查询和键长度相同。
 
-![image.png](Attention%20&%20Transformer%20173accec68e580b5b61af651208b4c37/image%201.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/Attention%20%26%20Transformer%E5%9B%BE%E7%89%87/image%201.png)
 
 ### **多头注意力**
 
@@ -20,15 +20,15 @@
 
 为此，与其只使用单独一个注意力汇聚， 我们可以用独立学习得到的h组不同的 *线性投影*（linear projections）来变换查询、键和值。 然后，这h组变换后的查询、键和值将并行地送到注意力汇聚中。 最后，将这h个注意力汇聚的输出拼接在一起， 并且通过另一个可以学习的线性投影进行变换， 以产生最终输出，这种设计被称为*多头注意力*（multihead attention）。
 
-![image.png](Attention%20&%20Transformer%20173accec68e580b5b61af651208b4c37/image%202.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/Attention%20%26%20Transformer%E5%9B%BE%E7%89%87/image%202.png)
 
 处理公式：
 
-![image.png](Attention%20&%20Transformer%20173accec68e580b5b61af651208b4c37/image%203.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/Attention%20%26%20Transformer%E5%9B%BE%E7%89%87/image%203.png)
 
 最终输出：
 
-![image.png](Attention%20&%20Transformer%20173accec68e580b5b61af651208b4c37/image%204.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/Attention%20%26%20Transformer%E5%9B%BE%E7%89%87/image%202.png)
 
 ### 自注意力
 
@@ -36,7 +36,7 @@
 
 **卷积神经网络、循环神经网络、自注意力机制对比**
 
-![image.png](Attention%20&%20Transformer%20173accec68e580b5b61af651208b4c37/image%205.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/Attention%20%26%20Transformer%E5%9B%BE%E7%89%87/image%205.png)
 
 卷积神经网络和自注意力都拥有并行计算的优势， 而且自注意力的最大路径长度最短。 但是因为其计算复杂度是关于序列长度的二次方，所以在很长的序列中计算会非常慢。
 
