@@ -4,7 +4,7 @@
 
 Normalization：规范化或标准化，就是把输入数据X，在输送给神经元之前先对其进行平移和伸缩变换，将X的分布规范化成在**固定区间范围**的标准分布。
 
-![image.png](BN%E3%80%81LN%20167accec68e5801db32acf390a3ae013/image.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/BN%E3%80%81LN%E5%9B%BE%E7%89%87/image.png)
 
 **二、深度学习中为什么要用Normalization？**
 
@@ -16,11 +16,11 @@ Normalization根据标准化操作的维度不同可以分为batch Normalization
 
 BN（纵向规范化）：
 
-![image.png](BN%E3%80%81LN%20167accec68e5801db32acf390a3ae013/image%201.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/BN%E3%80%81LN%E5%9B%BE%E7%89%87/image%201.png)
 
 LN（横向规范化）：
 
-![image.png](BN%E3%80%81LN%20167accec68e5801db32acf390a3ae013/image%202.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/BN%E3%80%81LN%E5%9B%BE%E7%89%87/image%202.png)
 
 **四、Batch Normalization 和 Layer Normalization的区别**
 
