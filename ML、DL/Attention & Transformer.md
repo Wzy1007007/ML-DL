@@ -494,7 +494,7 @@ transformer的token是逐个生成的，每次新的预测会基于之前所有t
 
 引入KV缓存机制后，我们只需要计算最新token的注意力，先前的token注意力无需重复计算。参考下图：
 
-![554f08a03c8fea992555094d9049e51.jpg](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/Attention%20%26%20Transformer%E5%9B%BE%E7%89%87/0d2badcfe64167cfa040c6372f76bfc.jpg)
+![554f08a03c8fea992555094d9049e51.jpg](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/Attention%20%26%20Transformer%E5%9B%BE%E7%89%87/554f08a03c8fea992555094d9049e51.jpg)
 
 ![0d2badcfe64167cfa040c6372f76bfc.jpg](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/Attention%20%26%20Transformer%E5%9B%BE%E7%89%87/0d2badcfe64167cfa040c6372f76bfc.jpg)
 
