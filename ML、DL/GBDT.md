@@ -4,13 +4,13 @@
 
 **通过构造一组弱的学习器（树），并把多颗决策树的结果累加起来作为最终的预测输出**。该算法将决策树与集成思想进行了有效的结合。
 
-![image.png](GBDT%2015eaccec68e580658ef7e56370ac716a/image.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/GBDT%E5%9B%BE%E7%89%87/image.png)
 
 ### （1）boosting的思想
 
 Boosting方法训练基分类器时采用串行的方式，各个基分类器之间有依赖。它的基本思路是将基分类器层层叠加，每一层在训练的时候，对前一层基分类器分错的样本，给予更高的权重。测试时，根据各层分类器的结果的加权得到最终结果。
 
-![image.png](GBDT%2015eaccec68e580658ef7e56370ac716a/image%201.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/GBDT%E5%9B%BE%E7%89%87/image%201.png)
 
 ### （2）GBDT原理
 
@@ -18,7 +18,7 @@ Boosting方法训练基分类器时采用串行的方式，各个基分类器之
 - 每次都以当前预测为基准，下一个弱分类器去拟合误差函数（上一次的误差值）对预测值的残差（预测值与真实值之间的误差）。
 - GBDT的弱分类器使用的是树模型（第一张图）。
 
-![image.png](GBDT%2015eaccec68e580658ef7e56370ac716a/image%202.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/GBDT%E5%9B%BE%E7%89%87/image%202.png)
 
 用GBDT去预测年龄：
 
@@ -28,7 +28,7 @@ Boosting方法训练基分类器时采用串行的方式，各个基分类器之
 第四课树用1岁拟合剩下的残差，完成。
 最终，四棵树的结论加起来，得到30岁这个标注答案（实际工程实现里，GBDT是计算负梯度，用负梯度近似残差）。
 
-![image.png](GBDT%2015eaccec68e580658ef7e56370ac716a/image%203.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/GBDT%E5%9B%BE%E7%89%87/image%203.png)
 
 ### （3）GBDT训练过程
 
@@ -36,11 +36,11 @@ Boosting方法训练基分类器时采用串行的方式，各个基分类器之
 
 我们先看看用回归树来训练，得到的结果如下图所示：
 
-![image.png](GBDT%2015eaccec68e580658ef7e56370ac716a/image%204.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/GBDT%E5%9B%BE%E7%89%87/image%204.png)
 
 接下来改用GBDT来训练。由于样本数据少，我们限定叶子节点最多为2（即每棵树都只有一个分枝），并且限定树的棵树为2。最终训练得到的结果如下图所示：
 
-![image.png](GBDT%2015eaccec68e580658ef7e56370ac716a/image%205.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/GBDT%E5%9B%BE%E7%89%87/image%205.png)
 
 上图中的树很好理解：A、B年龄较为相近，C、D年龄较为相近，被分为左右两支，每支用平均年龄作为预测值。
 
@@ -48,7 +48,7 @@ Boosting方法训练基分类器时采用串行的方式，各个基分类器之
 
 这里A的「预测值」是指前面所有树预测结果累加的和，在当前情形下前序只有一棵树，所以直接是15，其他多树的复杂场景下需要累加计算作为A的预测值。
 
-![image.png](GBDT%2015eaccec68e580658ef7e56370ac716a/image%206.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/GBDT%E5%9B%BE%E7%89%87/image%206.png)
 
 上图中的树就是残差学习的过程了
 
@@ -58,7 +58,7 @@ Boosting方法训练基分类器时采用串行的方式，各个基分类器之
 
 我们把这棵树的预测值累加到第一棵树上的预测结果上，就能得到真实年龄，这个简单例子中每个人都完美匹配，得到了真实的预测值。
 
-![image.png](GBDT%2015eaccec68e580658ef7e56370ac716a/image%207.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/GBDT%E5%9B%BE%E7%89%87/image%207.png)
 
 最终的预测过程是这样的：
 
@@ -74,11 +74,11 @@ D：工作两年员工，购物较多，经常被学弟提问，真实年龄26�
 
 梯度下降：是在参数空间里更新
 
-![image.png](GBDT%2015eaccec68e580658ef7e56370ac716a/image%208.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/GBDT%E5%9B%BE%E7%89%87/image%208.png)
 
 ### GBDT的优缺点
 
-![image.png](GBDT%2015eaccec68e580658ef7e56370ac716a/image%209.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/GBDT%E5%9B%BE%E7%89%87/image%209.png)
 
 ## GBDT方法：LightGBM
 
@@ -134,7 +134,7 @@ Histogram算法找到的分割点并不是很精确，但对最终的精度影�
 
 差加速：LightGBM另一个优化是Histogram（直方图）做差加速。一个叶子的直方图可以由它的父亲节点的直方图与它兄弟的直方图做差得到，在速度上可以提升一倍。
 
-![image.png](GBDT%2015eaccec68e580658ef7e56370ac716a/image%2010.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/GBDT%E5%9B%BE%E7%89%87/image%2010.png)
 
 ### 单边梯度采样算法
 
