@@ -4,7 +4,7 @@
 
 ### **attention机制**
 
-![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/Attention%20%26%20Transformer%E5%9B%BE%E7%89%87/image%201.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/Attention%20%26%20Transformer%E5%9B%BE%E7%89%87/image.png)
 
 三要素：查询、键、值，查询和键生成权重（值的重要性），与对应值相乘，再汇总得到输出。
 
@@ -28,7 +28,7 @@
 
 最终输出：
 
-![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/Attention%20%26%20Transformer%E5%9B%BE%E7%89%87/image%202.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/Attention%20%26%20Transformer%E5%9B%BE%E7%89%87/image%204.png)
 
 ### 自注意力
 
@@ -48,7 +48,7 @@
 
 ### **Transformer（自注意力机制）**
 
-![image.png](Attention%20&%20Transformer%20173accec68e580b5b61af651208b4c37/image%206.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/Attention%20%26%20Transformer%E5%9B%BE%E7%89%87/image%206.png)
 
 Transformer的编码器和解码器是基于自注意力的模块叠加而成的，源（输入）序列和目标（输出）序列的*嵌入*（embedding）表示将加上*位置编码*（positional encoding），再分别输入到编码器和解码器中。
 
@@ -153,7 +153,7 @@ Decoder的Masked多头注意力模块输出作为查询，Encoder 模块的输�
 
 Attention 的核心思想是计算序列中每个位置的重要性分数，公式为：
 
-![image.png](Attention%20&%20Transformer%20173accec68e580b5b61af651208b4c37/image%207.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/Attention%20%26%20Transformer%E5%9B%BE%E7%89%87/image%207.png)
 
 Q: 查询向量（Query）
 
@@ -293,7 +293,7 @@ Transformer 中没有像 RNN 那样的循环结构，输入序列的顺序信息
 
 Transformer 原始论文使用 **固定的正余弦函数** 进行位置编码，公式如下：
 
-![image.png](Attention%20&%20Transformer%20173accec68e580b5b61af651208b4c37/image%208.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/Attention%20%26%20Transformer%E5%9B%BE%E7%89%87/image%208.png)
 
 pos 表示位置，i 表示当前向量的维度索引，dmodel​ 是向量的维度大小。
 
@@ -437,7 +437,7 @@ pos 表示位置，i 表示当前向量的维度索引，dmodel​ 是向量的�
 
 ### **5.4 NLP 任务中使用 RNN 和 Transformer 的区别是什么？**
 
-![image.png](Attention%20&%20Transformer%20173accec68e580b5b61af651208b4c37/image%209.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/Attention%20%26%20Transformer%E5%9B%BE%E7%89%87/image%209.png)
 
 ### **5.5 RNN 为什么不需要使用位置编码？**
 
