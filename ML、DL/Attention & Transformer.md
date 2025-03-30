@@ -4,7 +4,7 @@
 
 ### **attention机制**
 
-![image.png](Attention%20&%20Transformer%20173accec68e580b5b61af651208b4c37/image.png)
+![image.png](https://github.com/Wzy1007007/ML-DL/blob/main/ML%E3%80%81DL/Attention%20%26%20Transformer%E5%9B%BE%E7%89%87/image%201.png)
 
 三要素：查询、键、值，查询和键生成权重（值的重要性），与对应值相乘，再汇总得到输出。
 
